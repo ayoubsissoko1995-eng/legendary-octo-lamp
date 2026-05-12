@@ -41,3 +41,7 @@ Following & being disciplined with the Google cybersecurity certificate program 
 10 May 2026
 
 Complete course 1 of 8 of the Google Cybersecurity certificate program
+
+12 may 2025
+
+completed course 2 of 8 of the google cybersecurity certificate program. Done my first practical audit of a toy company that had several compliance defeciency in their business operations. They are US based company but most of their clients are from the EU and so they were not compliant to the EU regulations on Payments and procedures
