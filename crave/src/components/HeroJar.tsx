@@ -24,10 +24,10 @@ export function HeroJar({ getProgress = () => 0 }: { getProgress?: () => number 
           muted
           loop
           playsInline
-          poster="/video/crave-jar-poster.jpg"
+          poster={`${import.meta.env.BASE_URL}video/crave-jar-poster.jpg`}
         >
-          <source src="/video/crave-jar.webm" type="video/webm" />
-          <source src="/video/crave-jar.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}video/crave-jar.webm`} type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}video/crave-jar.mp4`} type="video/mp4" />
         </video>
       </div>
       {flashKey > 0 && (
