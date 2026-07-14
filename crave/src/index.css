@@ -32,3 +32,21 @@
     touch-action: manipulation;
   }
 }
+
+@keyframes jar-flash {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.jar-flash {
+  opacity: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 65%);
+  animation: jar-flash 380ms ease-out forwards;
+}
