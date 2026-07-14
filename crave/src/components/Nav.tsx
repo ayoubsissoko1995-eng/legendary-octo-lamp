@@ -11,7 +11,7 @@ export function Nav() {
           href="#drop"
           className="border border-ink px-4 py-2 text-sm font-semibold uppercase tracking-wide transition-colors hover:bg-ink hover:text-paper"
         >
-          Shop the drop
+          Grab the drop
         </a>
       </div>
     </header>

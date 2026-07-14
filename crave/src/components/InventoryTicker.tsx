@@ -38,13 +38,13 @@ export function InventoryTicker() {
       ? 'CHECKING STOCK…'
       : soldOut
         ? 'SOLD OUT'
-        : `${available} / ${TOTAL_JARS} JARS AVAILABLE`
+        : `${available} / ${TOTAL_JARS} JARS LEFT`
 
   return (
     <div
       role="status"
       aria-live="polite"
-      className={`inline-flex items-center gap-2 border px-4 py-3 text-sm font-bold uppercase tracking-widest ${
+      className={`inline-flex items-center gap-2 border bg-paper/90 px-4 py-3 text-sm font-bold uppercase tracking-widest backdrop-blur-sm ${
         urgent ? 'border-scarce text-scarce' : 'border-ink text-ink'
       }`}
     >
