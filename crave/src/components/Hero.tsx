@@ -86,7 +86,7 @@ export function Hero() {
                 gatekeeping. When they&apos;re gone, they&apos;re gone.
               </p>
 
-              <CtaButton>Grab Now — R150</CtaButton>
+              <CtaButton>Grab It Now — R150</CtaButton>
             </div>
           </div>
         </div>
