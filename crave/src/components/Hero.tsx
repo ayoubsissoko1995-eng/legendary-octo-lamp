@@ -46,43 +46,48 @@ export function Hero() {
 
   return (
     <section id="drop" ref={outerRef} className="relative h-[200vh]">
-      <div className="sticky top-0 flex h-screen flex-col justify-end overflow-hidden pt-16">
-        <div className="absolute inset-0 z-0">
-          <Suspense fallback={null}>
-            <HeroJar getProgress={() => progressRef.current} />
-          </Suspense>
+      <div className="sticky top-0 flex h-screen flex-col overflow-hidden pt-16">
+        {/* Ticker gets real, dedicated space up top — not floating over the video */}
+        <div className="relative z-10 flex justify-center border-b border-ink bg-paper px-4 py-3">
+          <InventoryTicker />
         </div>
 
-        {/* Portal glow — intensifies as the jar zooms in, selling the "flying through" transition */}
-        <div
-          ref={glowRef}
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[5] opacity-0"
-          style={{
-            background:
-              'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%)',
-          }}
-        />
+        <div className="relative flex flex-1 flex-col justify-end overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Suspense fallback={null}>
+              <HeroJar getProgress={() => progressRef.current} />
+            </Suspense>
+          </div>
 
-        <div
-          ref={contentRef}
-          className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-4 pb-16 text-center sm:pb-24"
-        >
-          <InventoryTicker />
+          {/* Portal glow — intensifies as the jar zooms in, selling the "flying through" transition */}
+          <div
+            ref={glowRef}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-[5] opacity-0"
+            style={{
+              background:
+                'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%)',
+            }}
+          />
 
-          <div className="flex flex-col items-center gap-4 bg-paper/90 px-6 py-6 backdrop-blur-sm sm:px-10 sm:py-8">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink sm:text-sm">
-              Strawberry Cheesecake &middot; R150
-            </p>
-            <h1 className="text-4xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
-              Scarce. Craved. Gone.
-            </h1>
-            <p className="max-w-md text-sm text-ink sm:text-base">
-              100 jars. Every week. First come, first served — no waitlist, no
-              gatekeeping. When they&apos;re gone, they&apos;re gone.
-            </p>
+          <div
+            ref={contentRef}
+            className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 pb-16 text-center sm:pb-24"
+          >
+            <div className="flex flex-col items-center gap-4 bg-paper/90 px-6 py-6 backdrop-blur-sm sm:px-10 sm:py-8">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink sm:text-sm">
+                Strawberry Cheesecake &middot; R150
+              </p>
+              <h1 className="text-4xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
+                Scarce. Craved. Gone.
+              </h1>
+              <p className="max-w-md text-sm text-ink sm:text-base">
+                100 jars. Every week. First come, first served — no waitlist, no
+                gatekeeping. When they&apos;re gone, they&apos;re gone.
+              </p>
 
-            <CtaButton>Grab Now — R150</CtaButton>
+              <CtaButton>Grab Now — R150</CtaButton>
+            </div>
           </div>
         </div>
       </div>

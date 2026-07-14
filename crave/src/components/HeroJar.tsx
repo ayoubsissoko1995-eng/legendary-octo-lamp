@@ -17,9 +17,9 @@ export function HeroJar({ getProgress = () => 0 }: { getProgress?: () => number 
       onPointerEnter={triggerFlash}
       onPointerDown={triggerFlash}
     >
-      <div ref={wrapRef} className="flex h-full w-full items-center justify-center">
+      <div ref={wrapRef} className="flex h-full w-full items-start justify-center">
         <video
-          className="h-auto w-[92%] max-w-none object-contain sm:h-[85%] sm:w-auto"
+          className="h-auto w-full max-w-xl object-cover sm:max-w-2xl"
           autoPlay
           muted
           loop
