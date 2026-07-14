@@ -52,8 +52,10 @@ export function Hero() {
           <InventoryTicker />
         </div>
 
-        <div className="relative flex flex-1 flex-col justify-end overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        <div className="relative flex flex-1 flex-col overflow-hidden">
+          {/* Video owns all the leftover space — the text panel below only takes
+              what its own content needs, so the video stays as large as possible. */}
+          <div className="relative min-h-0 flex-1">
             <Suspense fallback={null}>
               <HeroJar getProgress={() => progressRef.current} />
             </Suspense>
@@ -72,13 +74,13 @@ export function Hero() {
 
           <div
             ref={contentRef}
-            className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 pb-16 text-center sm:pb-24"
+            className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 pb-4 text-center sm:pb-6"
           >
-            <div className="flex flex-col items-center gap-4 bg-paper/90 px-6 py-6 backdrop-blur-sm sm:px-10 sm:py-8">
+            <div className="flex flex-col items-center gap-3 bg-paper/90 px-6 py-4 backdrop-blur-sm sm:px-10 sm:py-6">
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink sm:text-sm">
                 Strawberry Cheesecake &middot; R150
               </p>
-              <h1 className="text-4xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
+              <h1 className="text-3xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-5xl md:text-6xl">
                 Scarce. Craved. Gone.
               </h1>
               <p className="max-w-md text-sm text-ink sm:text-base">
