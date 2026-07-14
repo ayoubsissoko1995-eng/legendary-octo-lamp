@@ -14,13 +14,13 @@ export function Hero() {
       id="drop"
       className="relative flex min-h-screen flex-col justify-end overflow-hidden pt-16"
     >
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 z-0">
         <Suspense fallback={null}>
           <HeroJar />
         </Suspense>
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pb-16 text-center sm:pb-24">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pb-16 text-center sm:pb-24">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-ink/70 sm:text-sm">
           Strawberry Cheesecake &middot; R150
         </p>
